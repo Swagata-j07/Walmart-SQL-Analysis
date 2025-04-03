@@ -305,7 +305,7 @@ Goal: Create a structured workspace within VS Code and organize project folders 
      - SQL query scripts.
      - Data files (if possible) or steps to access them.
 
----
+
 
 
 ## Requirements
@@ -328,7 +328,7 @@ Goal: Create a structured workspace within VS Code and organize project folders 
    ```
 3. Set up your Kaggle API, download the data, and follow the steps to load and analyze.
 
----
+
 
 ## Project Structure
 
@@ -340,7 +340,7 @@ Goal: Create a structured workspace within VS Code and organize project folders 
 |-- requirements.txt          # List of required Python libraries
 |-- main.py                   # Main script for loading, cleaning, and processing data
 ```
----
+
 
 ## Results and Insights
 
@@ -362,7 +362,7 @@ Possible extensions to this project:
 - **Data Source**: Kaggle’s Walmart Sales Dataset
 - **Inspiration**: Walmart’s business case studies on sales and supply chain optimization.
 
----
+
 
 
 
