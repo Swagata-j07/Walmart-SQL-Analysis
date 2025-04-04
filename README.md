@@ -223,7 +223,8 @@ Revenue_Growth AS (
     SELECT month, 
            revenue, 
            LAG(revenue) OVER (ORDER BY month) AS prev_month_revenue,
-           ROUND(((revenue - LAG(revenue) OVER (ORDER BY month)) / NULLIF(LAG(revenue) OVER (ORDER BY month), 0))::NUMERIC, 2) AS growth_rate
+           ROUND(((revenue - LAG(revenue) OVER (ORDER BY month)) /
+           NULLIF(LAG(revenue) OVER (ORDER BY month), 0))::NUMERIC, 2) AS growth_rate
     FROM Monthly_Revenue
 )
 SELECT * 
