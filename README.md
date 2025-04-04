@@ -18,8 +18,7 @@ Objective: Analyze customer feedback on product categories across different citi
 Business Impact: Helps identify cities where certain product categories are underperforming in customer satisfaction.
 
 Query Approach:
-```
-sql
+```sql
       SELECT
             city, 
             category,
@@ -38,8 +37,7 @@ Objective: Find the most preferred product categories per branch based on custom
 Business Impact: Helps in improving inventory and promotional strategies for top-rated categories.
 
 Query Approach:
-```
-sql
+```sql
 
 WITH CTE1 AS (SELECT
 	  branch,
@@ -61,8 +59,7 @@ Objective: Identify customer payment preferences and analyze their relationship 
 Business Impact: Helps in offering better payment-related promotions or discounts.
 
 Query Approach:
-```
-sql
+```sql
 
 WITH rank_payment_method 
 AS (
@@ -86,8 +83,7 @@ Objective: Identify branches with the highest customer satisfaction based on rat
 Business Impact: Helps in understanding what factors contribute to high engagement and replicating them across other branches.
 
 Query Approach:
-```
-sql
+```sql
 
       SELECT branch,
              city,
@@ -106,8 +102,7 @@ Objective: Determine which days see the most sales for better workforce planning
 Business Impact: Helps in scheduling staff and stocking up inventory for peak days.
 
 Query Approach:
-```
-sql
+```sql
       SELECT * 
       FROM (
       	  SELECT branch, 
@@ -127,8 +122,7 @@ Objective: Identify how sales vary throughout the day.
 Business Impact: Helps optimize staffing, promotional timing, and store operations.
 
 Query Approach:
-```
-sql
+```sql
       SELECT branch, 
              CASE 
                  WHEN EXTRACT(HOUR FROM time::time) < 12 THEN 'Morning'
@@ -151,8 +145,7 @@ Objective: Determine the most profitable product categories.
 Business Impact: Helps in product pricing and inventory optimization.
 
 Query Approach:
-```
-sql
+```sql
       SELECT category,
 	   ROUND(SUM(total)::numeric, 2) AS total_revenue,
 	   ROUND(SUM(total * profit_margin)::numeric, 2) AS total_profit
@@ -168,8 +161,7 @@ Objective: Identify the city with the highest number of high-value purchases.
 Business Impact: Helps in targeted marketing and premium customer strategies.
 
 Query Approach:
-```
-sql
+```sql
       WITH High_Value_Purchases AS (
     SELECT city, 
            category, 
@@ -197,8 +189,7 @@ Objective: Identify the most profitable product category per city.
 Business Impact: Helps in targeted stock planning for different cities.
 
 Query Approach:
-```
-sql
+```sql
       WITH Category_Profit AS (
     SELECT city, 
            category, 
@@ -220,8 +211,7 @@ Objective: Calculate the monthly revenue growth rate.
 Business Impact: Helps in understanding the financial trajectory and seasonal trends.
 
 Query Approach:
-```
-sql
+```sql
 
 WITH Monthly_Revenue AS (
     SELECT TO_CHAR(TO_DATE(date, 'DD/MM/YY'), 'YYYY-MM') AS month, 
