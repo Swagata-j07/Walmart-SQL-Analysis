@@ -9,7 +9,7 @@ Designed for aspiring and experienced data analysts, this project enhances SQL q
 
 ## 🔍 Business Problems & Objectives
 
-## Customer Behaviour
+## 1. Customer Behaviour
 
 ### Q1: Determine the average, minimum, and maximum rating of each category for each city.
 
